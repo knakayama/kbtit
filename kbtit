@@ -1,6 +1,3 @@
 #!/bin/bash
 
-PWD_DIR="$(cd "$(dirname "$0")" && pwd)"
-ASSET="${PWD_DIR}/assets/kbtit.txt"
-
-cat "$ASSET" | perl -MList::Util -e 'print List::Util::shuffle <>' | head -n 1
+curl -sSL 'https://raw.githubusercontent.com/knakayama/kbtit/master/assets/kbtit.txt' | perl -MList::Util -e 'print List::Util::shuffle <>' | head -n 1
